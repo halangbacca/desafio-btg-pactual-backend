@@ -31,7 +31,7 @@ class OrderCreatedListenerTest {
         void shouldCallServiceWithCorrectParameters() {
 
             // ARRANGE
-            var event = OrderCreatedEventFactory.build();
+            var event = OrderCreatedEventFactory.buildWithOneItem();
             var message = MessageBuilder.withPayload(event).build();
 
             // ACT
