@@ -23,12 +23,10 @@ public class OrderService {
 
     private final OrderRepository orderRepository;
     private final MongoTemplate mongoTemplate;
-    private final MongoClient mongo;
 
     public OrderService(OrderRepository orderRepository, MongoTemplate mongoTemplate, MongoClient mongo) {
         this.orderRepository = orderRepository;
         this.mongoTemplate = mongoTemplate;
-        this.mongo = mongo;
     }
 
     public void save(OrderCreatedEvent event) {
